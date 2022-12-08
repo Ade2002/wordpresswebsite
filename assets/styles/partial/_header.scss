@@ -61,17 +61,25 @@ header {
         }
 
         &:nth-child(5) {
-          border: 2px solid $eParkDefaultColor
+          border: 2px solid $eParkDefaultColor;
+          border-radius: 10px;
+          transition: all 0.3s;
+          @include media($laptop) {
+            display: flex;
+            width: 20%;
+            height: 42px;
+            padding: 0;
+          }
         }
 
         &:last-child {
           transition: all 0.3s;
           border-radius: 10px;
           display: none;
-
+border: none;
           @include media($laptop) {
             display: flex;
-            width: 25%;
+            width: 20%;
             height: 42px;
             padding: 0;
           }

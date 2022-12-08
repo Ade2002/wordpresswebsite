@@ -811,16 +811,27 @@ header span.navLinks a, header span.navLinks button {
 }
 header span.navLinks a:nth-child(5), header span.navLinks button:nth-child(5) {
   border: 2px solid #3524EE;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+@media only screen and (min-width: 1024px) {
+  header span.navLinks a:nth-child(5), header span.navLinks button:nth-child(5) {
+    display: flex;
+    width: 20%;
+    height: 42px;
+    padding: 0;
+  }
 }
 header span.navLinks a:last-child, header span.navLinks button:last-child {
   transition: all 0.3s;
   border-radius: 10px;
   display: none;
+  border: none;
 }
 @media only screen and (min-width: 1024px) {
   header span.navLinks a:last-child, header span.navLinks button:last-child {
     display: flex;
-    width: 25%;
+    width: 20%;
     height: 42px;
     padding: 0;
   }
