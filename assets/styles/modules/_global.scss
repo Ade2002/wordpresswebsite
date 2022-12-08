@@ -115,11 +115,11 @@ h2 {
   }
 
   @include media {
-    font-size: 3.2vw;
+    font-size: 1.2vw;
   }
 
   @include media($laptop) {
-    font-size: 3.7vw;
+    font-size: 1.7vw;
   }
 }
 

@@ -29,21 +29,43 @@ main {
 
         @include media {
           transform: scale(1.1);
-          min-width: 23.8%;
-          width: 23.8%;
+          min-width: 20.8%;
+          width: 20.8%;
           transform: translate(3.125%, 0) scale(1.1);
           margin-top: 0;
         }
       }
     }
+
+    img {
+      align-self: flex-start;
+      justify-self: flex-start;
+    }
+
+    section {
+      box-shadow: -6px -6px 12px #C9C4FF, 6px 6px 12px #A59CFF;
+      margin-top: 2em;
+      background: #fFF;
+
+      form {
+        width: 60%;
+      }
+
+      span {
+        background: #009EFF;
+        width: 40%;
+        padding: 2em;
+      }
+    }
+
     @include media {
       flex-direction: row;
       background-image: url(/assets/img/kiteBg.png), url(/assets/img/blueRectangle.png), url(/assets/img/kiteBg.png);
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-attachment: fixed, fixed, fixed;
-      background-position: 0 0, 0 80px, 550px 60px;
+      background-position: 100% 100%, 30px 280px, 5% 30%;
       justify-content: space-between;
-      background-size: auto, auto, auto;
+      background-size: 30px, auto, 30px;
       /*   background: {
         image: url(/assets/img/circleBackground.svg);
         repeat: no-repeat;

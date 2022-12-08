@@ -645,12 +645,12 @@ h2 {
 }
 @media only screen and (min-width: 768px) {
   h2 {
-    font-size: 3.2vw;
+    font-size: 1.2vw;
   }
 }
 @media only screen and (min-width: 1024px) {
   h2 {
-    font-size: 3.7vw;
+    font-size: 1.7vw;
   }
 }
 
@@ -884,11 +884,28 @@ main#contact div img {
 @media only screen and (min-width: 768px) {
   main#contact div img {
     transform: scale(1.1);
-    min-width: 23.8%;
-    width: 23.8%;
+    min-width: 20.8%;
+    width: 20.8%;
     transform: translate(3.125%, 0) scale(1.1);
     margin-top: 0;
   }
+}
+main#contact img {
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+main#contact section {
+  box-shadow: -6px -6px 12px #C9C4FF, 6px 6px 12px #A59CFF;
+  margin-top: 2em;
+  background: #fFF;
+}
+main#contact section form {
+  width: 60%;
+}
+main#contact section span {
+  background: #009EFF;
+  width: 40%;
+  padding: 2em;
 }
 @media only screen and (min-width: 768px) {
   main#contact {
@@ -896,9 +913,9 @@ main#contact div img {
     background-image: url(/assets/img/kiteBg.png), url(/assets/img/blueRectangle.png), url(/assets/img/kiteBg.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-attachment: fixed, fixed, fixed;
-    background-position: 0 0, 0 80px, 550px 60px;
+    background-position: 100% 100%, 30px 280px, 5% 30%;
     justify-content: space-between;
-    background-size: auto, auto, auto;
+    background-size: 30px, auto, 30px;
     /*   background: {
       image: url(/assets/img/circleBackground.svg);
       repeat: no-repeat;
