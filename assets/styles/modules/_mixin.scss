@@ -10,6 +10,7 @@
     @content;
   }
 }
+
 @mixin mediaR($device:$tablet) {
   @media only screen and (max-width: #{$device}) {
     @content;
@@ -17,7 +18,7 @@
 }
 
 @mixin srcset($device:$tablet) {
- 
+
   &:last-child() {
     display: none;
 
@@ -25,6 +26,7 @@
       display: block;
     }
   }
+
   @include media($device) {
     display: none;
   }
@@ -33,5 +35,6 @@
 
 @mixin margin($t: 1, $b: $t, $vh: vh) {
   $h1: (3, 3);
-  margin: nth($h1, 1) / $t + $vh 0 nth($h1, 2) / $b + $vh;
+  margin: cal(nth($h1, 1) / $t + $vh 0 nth($h1, 2) / $b + $vh);
+
 }

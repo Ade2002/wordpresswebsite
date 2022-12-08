@@ -7,7 +7,6 @@
 .bgBlue {
   background-color: $eParkDefaultColor !important;
   color: $white !important;
-  border:none !important;
 }
 .white {
   color: $white !important;
@@ -49,12 +48,10 @@
   vertical-align: middle;
   transition: all 0.3s ease-in-out;
   font-size: $defaultFontSize;
-  margin: 2 * $paddingHeight 0;
   &:hover{
     background-color: white;
   }
   @include media {
-    margin: 4 * $paddingHeight 0;
     width: 24vw;
   }
   @include media($laptop) {
