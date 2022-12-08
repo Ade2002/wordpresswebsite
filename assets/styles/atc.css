@@ -899,13 +899,28 @@ main#contact section {
   margin-top: 2em;
   background: #fFF;
 }
-main#contact section form {
-  width: 60%;
-}
 main#contact section span {
   background: #009EFF;
-  width: 40%;
+  width: 100%;
   padding: 2em;
+}
+main#contact section span img {
+  width: 100%;
+  margin-top: 2em;
+}
+main#contact section form {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  main#contact section form {
+    width: 60%;
+  }
+  main#contact section span {
+    width: 40%;
+  }
+  main#contact section span img {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 768px) {
   main#contact {
@@ -1227,9 +1242,8 @@ main#workstation > div#contact a, main#workstation > div#contact button {
 }
 
 footer {
-  padding-top: 2vh;
   padding-bottom: 2vh;
-  padding: 6vh 0 2vh;
+  padding: 2vh 0 2vh;
   background-color: #150C21;
 }
 @media only screen and (min-width: 768px) {

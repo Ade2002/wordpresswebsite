@@ -46,16 +46,34 @@ main {
       box-shadow: -6px -6px 12px #C9C4FF, 6px 6px 12px #A59CFF;
       margin-top: 2em;
       background: #fFF;
-
-      form {
-        width: 60%;
-      }
-
       span {
         background: #009EFF;
-        width: 40%;
+        width: 100%;
         padding: 2em;
+
+        img {
+          width: 100%;
+          margin-top: 2em;
+        }
       }
+      form {
+        width: 100%;
+      }
+      @include media {
+
+        form {
+          width: 60%;
+        }
+
+        span {
+          width: 40%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
     }
 
     @include media {
