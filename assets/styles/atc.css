@@ -9,6 +9,7 @@
 .bgBlue {
   background-color: #3524EE !important;
   color: #fff !important;
+  border: none !important;
 }
 
 .white {
@@ -810,9 +811,11 @@ header span.navLinks a, header span.navLinks button {
     text-underline-offset: 4px;
   }
 }
+header span.navLinks a:nth-child(5), header span.navLinks button:nth-child(5) {
+  border: 2px solid #150C21;
+}
 header span.navLinks a:last-child, header span.navLinks button:last-child {
   transition: all 0.3s;
-  border: 2px solid #150C21;
   border-radius: 10px;
   display: none;
 }

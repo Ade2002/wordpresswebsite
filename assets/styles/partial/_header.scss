@@ -54,10 +54,12 @@ header {
             text-underline-offset: $smallpadding;
           }
         }
+&:nth-child(5){
+  border: 2px solid $black;
 
+}
         &:last-child {
           transition: all 0.3s;
-          border: 2px solid $black;
           border-radius: 10px;
           display: none;
 
