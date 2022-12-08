@@ -82,18 +82,18 @@ img {
 
 h1 {
   font: {
-    size: 10.5vw;
+    size: 7.5vw;
     weight: 600;
   }
 
   @include margin();
 
   @include media(540px) {
-    font-size: 7.5vw;
+    font-size: 5.5vw;
   }
 
   @include media {
-    font-size: 2.2vw;
+    font-size: 3.2vw;
   }
 
   @include media($laptop) {
@@ -103,7 +103,7 @@ h1 {
 
 h2 {
   font: {
-    size: 10.5vw;
+    size: 5.5vw;
     weight: 600;
   }
 

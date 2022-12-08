@@ -612,18 +612,18 @@ img {
 }
 
 h1 {
-  font-size: 10.5vw;
+  font-size: 7.5vw;
   font-weight: 600;
   margin: cal(3vh 0 3vh);
 }
 @media only screen and (min-width: 540px) {
   h1 {
-    font-size: 7.5vw;
+    font-size: 5.5vw;
   }
 }
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 2.2vw;
+    font-size: 3.2vw;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -633,7 +633,7 @@ h1 {
 }
 
 h2 {
-  font-size: 10.5vw;
+  font-size: 5.5vw;
   font-weight: 600;
   margin: cal(3vh 0 3vh);
   margin-top: 0;
@@ -893,16 +893,21 @@ main#contact div img {
 @media only screen and (min-width: 768px) {
   main#contact {
     flex-direction: row;
-    background-image: url(../../public//snakeBG.png), url(../../public//springBG.png), url(../../public//kiteBG.png);
+    background-image: url(/assets/img/kiteBg.png), url(/assets/img/blueRectangle.png), url(/assets/img/kiteBg.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-attachment: fixed, fixed, fixed;
-    background-position: -30px 190px, 0 80px, 550px 60px;
+    background-position: 0 0, 0 80px, 550px 60px;
     justify-content: space-between;
-    background-size: 40% 65%, auto, auto;
+    background-size: auto, auto, auto;
     /*   background: {
       image: url(/assets/img/circleBackground.svg);
       repeat: no-repeat;
       position: 200% -100%;
+          background-repeat: no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed, fixed, fixed;
+    background-position: -30px 190px, 0 80px, 550px 60px;
+    justify-content: space-between;
+    background-size: 40% 65%, auto, auto;
       size: 75% 75%;
     } */
   }
