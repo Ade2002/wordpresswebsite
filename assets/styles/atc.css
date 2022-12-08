@@ -560,13 +560,13 @@
 }
 
 html {
-  color: #000;
+  color: #3524EE;
   scroll-behavior: smooth;
 }
 
 body {
   background-color: #fff;
-  color: #150C21;
+  color: #3524EE;
   background-position: center;
   width: 100%;
 }
@@ -623,12 +623,12 @@ h1 {
 }
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 3.2vw;
+    font-size: 2.2vw;
   }
 }
 @media only screen and (min-width: 1024px) {
   h1 {
-    font-size: 3.7vw;
+    font-size: 2.7vw;
   }
 }
 
@@ -748,7 +748,7 @@ header {
   padding: 2vh 7vw;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   color: #150C21;
   box-shadow: 5px 10px 18px rgba(238, 238, 238, 0);
   transition: all 0.5s ease;
@@ -803,7 +803,7 @@ header span.navLinks a, header span.navLinks button {
     border-bottom: none;
     width: auto;
   }
-  header span.navLinks a:not(:last-child):hover, header span.navLinks button:not(:last-child):hover {
+  header span.navLinks a:not(:last-child, :nth-child(5)):hover, header span.navLinks button:not(:last-child, :nth-child(5)):hover {
     -webkit-text-decoration: underline solid #1207AB 4px;
             text-decoration: underline solid #1207AB 4px;
     text-underline-offset: 4px;
@@ -851,10 +851,10 @@ header span.icon svg {
   }
 }
 
-section {
+main {
   padding: 2vh 7vw;
 }
-section#overlay {
+main#overlay {
   position: fixed;
   background-color: #150C21;
   opacity: 0.5;
@@ -862,17 +862,62 @@ section#overlay {
   width: 100%;
   height: 100%;
 }
-section#academy div {
+main#contact div {
   padding-top: 75px;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  section#academy div {
+  main#contact div {
+    padding-top: 112.5px;
+    max-width: 100%;
+  }
+}
+main#contact div img {
+  width: 50%;
+  transform: scale(1.15);
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
+  margin-top: 2em;
+}
+@media only screen and (min-width: 768px) {
+  main#contact div img {
+    transform: scale(1.1);
+    min-width: 23.8%;
+    width: 23.8%;
+    transform: translate(3.125%, 0) scale(1.1);
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main#contact {
+    flex-direction: row;
+    background-image: url(../../public//snakeBG.png), url(../../public//springBG.png), url(../../public//kiteBG.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed, fixed, fixed;
+    background-position: -30px 190px, 0 80px, 550px 60px;
+    justify-content: space-between;
+    background-size: 40% 65%, auto, auto;
+    /*   background: {
+      image: url(/assets/img/circleBackground.svg);
+      repeat: no-repeat;
+      position: 200% -100%;
+      size: 75% 75%;
+    } */
+  }
+}
+main#academy div {
+  padding-top: 75px;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  main#academy div {
     padding-top: 112.5px;
     max-width: 45%;
   }
 }
-section#academy img {
+main#academy img {
   width: 100%;
   transform: scale(1.15);
   -webkit-animation-duration: 4s;
@@ -881,18 +926,18 @@ section#academy img {
           clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
 }
 @media only screen and (min-width: 768px) {
-  section#academy img {
+  main#academy img {
     transform: scale(1.1);
     min-width: 53.8%;
     width: 53.8%;
     transform: translate(3.125%, 0) scale(1.1);
   }
-  section#academy img:last-child {
+  main#academy img:last-child {
     display: none;
   }
 }
 @media only screen and (min-width: 768px) {
-  section#academy {
+  main#academy {
     flex-direction: row;
     background-image: url(/assets/img/circleBackground.svg);
     background-repeat: no-repeat;
@@ -900,23 +945,23 @@ section#academy img {
     background-size: 75% 75%;
   }
 }
-section#acad > div.tablet, section#acad > div.flex_r, section#acad > div.flex_rc, section#acad > div.flex_rC {
+main#acad > div.tablet, main#acad > div.flex_r, main#acad > div.flex_rc, main#acad > div.flex_rC {
   width: 100%;
   justify-content: center;
   align-content: center;
 }
-section#acad > div.tablet.affiliates, section#acad > div.flex_r.affiliates, section#acad > div.affiliates.flex_rc, section#acad > div.affiliates.flex_rC {
+main#acad > div.tablet.affiliates, main#acad > div.flex_r.affiliates, main#acad > div.affiliates.flex_rc, main#acad > div.affiliates.flex_rC {
   flex-wrap: wrap;
 }
-section#acad > div.tablet.affiliates:first-child img, section#acad > div.flex_r.affiliates:first-child img, section#acad > div.affiliates.flex_rc:first-child img, section#acad > div.affiliates.flex_rC:first-child img {
+main#acad > div.tablet.affiliates:first-child img, main#acad > div.flex_r.affiliates:first-child img, main#acad > div.affiliates.flex_rc:first-child img, main#acad > div.affiliates.flex_rC:first-child img {
   margin-top: 9vw;
 }
 @media only screen and (min-width: 768px) {
-  section#acad > div.tablet.affiliates:first-child img, section#acad > div.flex_r.affiliates:first-child img, section#acad > div.affiliates.flex_rc:first-child img, section#acad > div.affiliates.flex_rC:first-child img {
+  main#acad > div.tablet.affiliates:first-child img, main#acad > div.flex_r.affiliates:first-child img, main#acad > div.affiliates.flex_rc:first-child img, main#acad > div.affiliates.flex_rC:first-child img {
     margin-top: 4vw;
   }
 }
-section#acad > div.tablet.affiliates img, section#acad > div.flex_r.affiliates img, section#acad > div.affiliates.flex_rc img, section#acad > div.affiliates.flex_rC img {
+main#acad > div.tablet.affiliates img, main#acad > div.flex_r.affiliates img, main#acad > div.affiliates.flex_rc img, main#acad > div.affiliates.flex_rC img {
   filter: opacity(0.3);
   -o-object-fit: scale-down;
      object-fit: scale-down;
@@ -926,14 +971,14 @@ section#acad > div.tablet.affiliates img, section#acad > div.flex_r.affiliates i
   margin-top: 4vw;
 }
 @media only screen and (min-width: 768px) {
-  section#acad > div.tablet.affiliates img, section#acad > div.flex_r.affiliates img, section#acad > div.affiliates.flex_rc img, section#acad > div.affiliates.flex_rC img {
+  main#acad > div.tablet.affiliates img, main#acad > div.flex_r.affiliates img, main#acad > div.affiliates.flex_rc img, main#acad > div.affiliates.flex_rC img {
     margin-top: 0vw;
     width: 16%;
     -o-object-position: center;
        object-position: center;
   }
 }
-section#acad > div.tablet.academy img, section#acad > div.flex_r.academy img, section#acad > div.academy.flex_rc img, section#acad > div.academy.flex_rC img {
+main#acad > div.tablet.academy img, main#acad > div.flex_r.academy img, main#acad > div.academy.flex_rc img, main#acad > div.academy.flex_rC img {
   width: 24%;
   margin: 6vh 0.75vw;
   -o-object-fit: contain;
@@ -943,7 +988,7 @@ section#acad > div.tablet.academy img, section#acad > div.flex_r.academy img, se
       image-rendering: -moz-crisp-edges;
       image-rendering: pixelated;
 }
-section#acad > div.tablet.academy img:hover, section#acad > div.flex_r.academy img:hover, section#acad > div.academy.flex_rc img:hover, section#acad > div.academy.flex_rC img:hover {
+main#acad > div.tablet.academy img:hover, main#acad > div.flex_r.academy img:hover, main#acad > div.academy.flex_rc img:hover, main#acad > div.academy.flex_rC img:hover {
   transform: scale(1.1);
   /* filter: sepia(100%) hue-rotate(90deg)
     drop-shadow(8px 8px 10px gray); */
@@ -951,39 +996,39 @@ section#acad > div.tablet.academy img:hover, section#acad > div.flex_r.academy i
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (min-width: 768px) {
-  section#acad > div.note {
+  main#acad > div.note {
     width: 70%;
     text-align: center;
   }
 }
 @media only screen and (min-width: 1024px) {
-  section#acad > div.note {
+  main#acad > div.note {
     width: 65%;
   }
 }
-section#qhse {
+main#qhse {
   background-color: #1207AB;
   padding-top: 8vh;
 }
-section#qhse * {
+main#qhse * {
   color: #fff;
 }
-section#qhse a, section#qhse button {
+main#qhse a, main#qhse button {
   border: none;
   background-color: #0135d6;
   box-shadow: 2px 2px #000;
   box-shadow: 0 0 3px rgb(60, 72, 88);
 }
 @media only screen and (min-width: 768px) {
-  section#qhse a, section#qhse button {
+  main#qhse a, main#qhse button {
     align-self: flex-start;
   }
 }
-section#qhse img {
+main#qhse img {
   transform: translate(-3.125%, 0) scale(1.135);
 }
 @media only screen and (min-width: 768px) {
-  section#qhse img {
+  main#qhse img {
     transform: translate(3.5%, -2.5%);
     min-width: 50%;
     width: 50%;
@@ -991,46 +1036,46 @@ section#qhse img {
   }
 }
 @media only screen and (min-width: 1200px) {
-  section#qhse img {
+  main#qhse img {
     min-width: 45%;
     width: 45%;
   }
 }
 @media only screen and (min-width: 768px) {
-  section#qhse {
+  main#qhse {
     margin-top: 16vh;
     align-items: center;
     justify-content: space-between;
   }
-  section#qhse div {
+  main#qhse div {
     max-width: 50%;
   }
 }
-section#steam {
+main#steam {
   padding: 0;
   background: linear-gradient(0deg, #a5a6f6 -11.14%, rgba(252, 221, 236, 0) 10.68%);
 }
 @media only screen and (min-width: 768px) {
-  section#steam {
+  main#steam {
     background-image: url("/assets/img/airship.svg"), linear-gradient(0deg, #a5a6f6 -11.14%, rgba(252, 221, 236, 0) 28.68%);
     background-repeat: no-repeat;
     background-size: 90%, 100%;
     background-position: 60% 10%;
   }
 }
-section#steam > div {
+main#steam > div {
   padding: 2vh 7vw;
 }
-section#steam > div.note h4 {
+main#steam > div.note h4 {
   margin: 0 0 4.5vh;
 }
 @media only screen and (min-width: 768px) {
-  section#steam > div.note {
+  main#steam > div.note {
     max-width: 55%;
     padding-top: 10vh;
   }
 }
-section#steam > div.kids img {
+main#steam > div.kids img {
   height: 50vh;
   max-height: 250px;
   width: 90%;
@@ -1042,70 +1087,70 @@ section#steam > div.kids img {
       image-rendering: -moz-crisp-edges;
       image-rendering: pixelated;
 }
-section#steam > div.kids img:hover {
+main#steam > div.kids img:hover {
   transform: scale(1.2);
 }
 @media only screen and (min-width: 768px) {
-  section#steam > div.kids img {
+  main#steam > div.kids img {
     height: 35vh;
     max-height: 25%;
     width: 30%;
     margin-top: 10vh;
   }
 }
-section#steam > div:last-child a, section#steam > div:last-child button {
+main#steam > div:last-child a, main#steam > div:last-child button {
   margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  section#steam > div:last-child a, section#steam > div:last-child button {
+  main#steam > div:last-child a, main#steam > div:last-child button {
     background-color: #d7d8fb;
   }
 }
-section#workstation {
+main#workstation {
   padding: 0;
 }
-section#workstation > div {
+main#workstation > div {
   padding: 2vh 7vw;
   align-items: flex-start;
 }
-section#workstation > div:first-child {
+main#workstation > div:first-child {
   justify-content: space-between;
 }
 @media only screen and (min-width: 1024px) {
-  section#workstation > div:first-child {
+  main#workstation > div:first-child {
     margin-top: 10%;
   }
 }
 @media only screen and (min-width: 1024px) {
-  section#workstation > div:first-child > div {
+  main#workstation > div:first-child > div {
     width: 45%;
   }
 }
-section#workstation > div:first-child .buttons {
+main#workstation > div:first-child .buttons {
   justify-content: flex-start;
 }
-section#workstation > div:first-child .buttons a, section#workstation > div:first-child .buttons button {
+main#workstation > div:first-child .buttons a, main#workstation > div:first-child .buttons button {
   margin: 2vh 0;
 }
 @media only screen and (min-width: 768px) {
-  section#workstation > div:first-child .buttons a, section#workstation > div:first-child .buttons button {
+  main#workstation > div:first-child .buttons a, main#workstation > div:first-child .buttons button {
     margin: 3vh 0 11vh;
   }
-  section#workstation > div:first-child .buttons a:first-child, section#workstation > div:first-child .buttons button:first-child {
+  main#workstation > div:first-child .buttons a:first-child, main#workstation > div:first-child .buttons button:first-child {
     border: none;
     margin-right: 3vw;
   }
-  section#workstation > div:first-child .buttons a:last-child, section#workstation > div:first-child .buttons button:last-child {
+  main#workstation > div:first-child .buttons a:last-child, main#workstation > div:first-child .buttons button:last-child {
     width: 25%;
   }
 }
-section#workstation > div:first-child img {
+main#workstation > div:first-child img {
   -ms-interpolation-mode: nearest-neighbor;
       image-rendering: -moz-crisp-edges;
       image-rendering: pixelated;
 }
 @media only screen and (min-width: 768px) {
-  section#workstation > div:first-child img {
+  main#workstation > div:first-child img {
     margin: -10% 0 5% 10%;
     padding-bottom: 10%;
     z-index: 1;
@@ -1115,24 +1160,24 @@ section#workstation > div:first-child img {
   }
 }
 @media only screen and (min-width: 1024px) {
-  section#workstation > div:first-child img {
+  main#workstation > div:first-child img {
     padding-bottom: 20%;
     margin: -15% 0 5% 10%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  section#workstation > div:first-child img {
+  main#workstation > div:first-child img {
     transform: translateY(-30%);
   }
 }
-section#workstation > div#contact {
+main#workstation > div#contact {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-bottom: 0vh;
   padding: 8vh 7vw;
 }
 @media only screen and (min-width: 768px) {
-  section#workstation > div#contact {
+  main#workstation > div#contact {
     padding: 5% 7vw;
     margin: -30% 7vw 0;
     transform: translateY(60%);
@@ -1141,18 +1186,18 @@ section#workstation > div#contact {
   }
 }
 @media only screen and (min-width: 768px) {
-  section#workstation > div#contact p {
+  main#workstation > div#contact p {
     max-width: 85%;
   }
 }
-section#workstation > div#contact h4 {
+main#workstation > div#contact h4 {
   color: #a6efff;
 }
-section#workstation > div#contact a, section#workstation > div#contact button {
+main#workstation > div#contact a, main#workstation > div#contact button {
   border: 1px solid #fff;
 }
 @media only screen and (min-width: 768px) {
-  section#workstation > div#contact a, section#workstation > div#contact button {
+  main#workstation > div#contact a, main#workstation > div#contact button {
     width: 50%;
     margin: 0 0 0 4vw;
     padding: 0 5px;
