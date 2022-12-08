@@ -810,7 +810,7 @@ header span.navLinks a, header span.navLinks button {
   }
 }
 header span.navLinks a:nth-child(5), header span.navLinks button:nth-child(5) {
-  border: 2px solid #150C21;
+  border: 2px solid #3524EE;
 }
 header span.navLinks a:last-child, header span.navLinks button:last-child {
   transition: all 0.3s;
