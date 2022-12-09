@@ -934,7 +934,7 @@ main#contact section form span input:active, main#contact section form span inpu
 }
 main#contact section form span input:focus ~ label {
   top: -20px;
-  color: #03e9f4;
+  color: #3524EE;
   font-size: 12px;
   outline: none;
 }
