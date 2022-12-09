@@ -902,6 +902,7 @@ main#contact section {
 main#contact section span {
   width: 100%;
   padding: 2em;
+  background-color: #3524EE;
 }
 main#contact section span img {
   width: 100%;
@@ -914,11 +915,11 @@ main#contact section form {
   flex-direction: column;
   width: 100%;
 }
-main#contact section form span {
+main#contact section form fieldset {
   position: relative;
   width: 100%;
 }
-main#contact section form span input {
+main#contact section form fieldset input {
   outline: none;
   width: 100%;
   padding: 10px 0;
@@ -928,23 +929,23 @@ main#contact section form span input {
   border-bottom: 1px solid #3524EE;
   background: inherit;
 }
-main#contact section form span input:active, main#contact section form span input:valid, main#contact section form span input:focus {
+main#contact section form fieldset input:active, main#contact section form fieldset input:valid, main#contact section form fieldset input:focus {
   outline: none;
   background: inherit;
 }
-main#contact section form span input:focus ~ label {
+main#contact section form fieldset input:focus ~ label {
   top: -20px;
   color: #3524EE;
   font-size: 12px;
   outline: none;
 }
-main#contact section form span label {
+main#contact section form fieldset label {
   position: absolute;
   left: 0;
   padding-top: 0.5em;
   transition: 0.5s;
   /*pointer-events: none; */
-  color: #fff;
+  color: #3524EE;
   cursor: pointer;
 }
 main#contact section form button {

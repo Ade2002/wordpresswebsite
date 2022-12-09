@@ -50,6 +50,7 @@ main {
       span {
         width: 100%;
         padding: 2em;
+        background-color: #3524EE;
 
         img {
           width: 100%;
@@ -64,7 +65,7 @@ main {
         flex-direction: column;
         width: 100%;
 
-        span {
+        fieldset {
           position: relative;
           width: 100%;
 
@@ -102,7 +103,7 @@ main {
             padding-top: 0.5em;
             transition: .5s;
             /*pointer-events: none; */
-            color: #fff;
+            color: #3524EE;
             cursor: pointer;
           }
         }
