@@ -1319,9 +1319,17 @@ footer {
   padding: 2vh 0 2vh;
   background-color: #150C21;
 }
+footer section {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 @media only screen and (min-width: 768px) {
   footer {
     padding: 75px 0 6vh;
+  }
+  footer section {
+    padding-left: 6em;
+    padding-right: 6em;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1369,7 +1377,7 @@ footer .links a, footer .links button {
   margin: 2vh 0;
 }
 footer .links svg {
-  width: 10%;
+  width: 100%;
   vertical-align: middle;
   margin-right: 0.5vw;
 }

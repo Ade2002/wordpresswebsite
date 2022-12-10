@@ -2,8 +2,20 @@ footer {
   padding-bottom: $paddingHeight;
   padding: 1 * $paddingHeight 0 $paddingHeight;
 
+  section{padding: {
+    left: 1em;
+    right: 1em;
+  }}
+
   @include media {
     padding: 1 * $headerHeight 0 3 * $paddingHeight;
+
+    section {
+      padding: {
+        left: 6em;
+        right: 6em;
+      }
+    }
   }
 
   @include media($laptop) {
@@ -55,7 +67,7 @@ footer {
     }
 
     svg {
-      width: 10%;
+      width: 100%;
       vertical-align: middle;
       margin-right: $smallMargin;
     }
