@@ -982,8 +982,13 @@ main#contact section form span button:hover {
 @media only screen and (min-width: 768px) {
   main#contact section form span {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
     grid-template-rows: 50% 50% 50%;
+  }
+  main#contact section form button {
+    grid-row: 3;
+    grid-column: 2;
   }
   main#contact section form .emailField {
     grid-row: 1/1;
