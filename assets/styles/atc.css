@@ -915,6 +915,30 @@ main#contact section form {
   flex-direction: column;
   width: 100%;
 }
+main#contact section form span {
+  background-color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  main#contact section form span {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50% 50%;
+  }
+  main#contact section form:last-child {
+    transition: all 0.3s;
+    border-radius: 10px;
+    display: none;
+    border: none;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1024px) {
+  main#contact section form:last-child {
+    display: flex;
+    width: 20%;
+    height: 42px;
+    padding: 0;
+  }
+}
 main#contact section form fieldset {
   position: relative;
   width: 100%;
@@ -965,17 +989,6 @@ main#contact section form button:hover {
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #3524EE, 0 0 25px #3524EE, 0 0 50px #3524EE, 0 0 100px #3524EE;
-}
-@media only screen and (min-width: 768px) {
-  main#contact section form {
-    width: 60%;
-  }
-  main#contact section span {
-    width: 40%;
-  }
-  main#contact section span img {
-    width: 100%;
-  }
 }
 @media only screen and (min-width: 768px) {
   main#contact {

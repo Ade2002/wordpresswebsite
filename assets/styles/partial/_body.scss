@@ -64,6 +64,32 @@ main {
         align-items: center;
         flex-direction: column;
         width: 100%;
+        span {
+          background-color: #fff;
+          
+        }
+
+@include media{
+  span{
+    display: grid;
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 50% 50% 50%;
+  }
+  &:last-child {
+    transition: all 0.3s;
+    border-radius: 10px;
+    display: none;
+    border: none;
+
+    @include media($laptop) {
+      display: flex;
+      width: 20%;
+      height: 42px;
+      padding: 0;
+    }
+  }
+}
+      
 
         fieldset {
           position: relative;
@@ -128,21 +154,6 @@ main {
               0 0 25px #3524EE,
               0 0 50px #3524EE,
               0 0 100px #3524EE, ;
-          }
-        }
-      }
-
-      @include media {
-
-        form {
-          width: 60%;
-        }
-
-        span {
-          width: 40%;
-
-          img {
-            width: 100%;
           }
         }
       }
