@@ -64,100 +64,103 @@ main {
         align-items: center;
         flex-direction: column;
         width: 100%;
+
         span {
           background-color: #fff;
-          
-        }
 
-@include media{
-  span{
-    display: grid;
-          grid-template-columns: 50% 50%;
-          grid-template-rows: 50% 50% 50%;
-  }
-  &:last-child {
-    transition: all 0.3s;
-    border-radius: 10px;
-    display: none;
-    border: none;
-
-    @include media($laptop) {
-      display: flex;
-      width: 20%;
-      height: 42px;
-      padding: 0;
-    }
-  }
-}
-      
-
-        fieldset {
-          position: relative;
-          width: 100%;
-
-          input {
-            outline: none;
+          fieldset {
+            position: relative;
             width: 100%;
-            padding: 10px 0;
-            color: #fff;
-            margin-bottom: 2em;
-            border: none;
-            border-bottom: 4px solid #3524EE;
-            background: inherit;
-            font-size: 20px;
 
-            &:active,
-            &:valid,
-            &:focus {
+            @include media {
+
+              &:nth-child(3) {
+                grid-row: 3;
+                grid-column: 1;
+              }
+
+              &:nth-child(2) {
+                grid-row: 2;
+                grid-column: 1;
+              }
+            }
+
+            input {
               outline: none;
+              width: 100%;
+              padding: 10px 0;
+              color: #fff;
+              margin-bottom: 2em;
+              border: none;
+              border-bottom: 4px solid #3524EE;
               background: inherit;
+              font-size: 20px;
+
+              &:active,
+              &:valid,
+              &:focus {
+                outline: none;
+                background: inherit;
+              }
+
+
             }
 
 
+            input:focus~label {
+              top: -20px;
+              color: #3524EE;
+              font-size: 12px;
+              outline: none;
+            }
+
+            label {
+              position: absolute;
+              left: 0;
+              padding-top: 0.5em;
+              transition: .5s;
+              /*pointer-events: none; */
+              color: #3524EE;
+              cursor: pointer;
+              font-size: 20px;
+            }
           }
 
-
-          input:focus~label {
-            top: -20px;
+          button {
+            padding: 0.5em 1.5em;
+            align-self: flex-start;
             color: #3524EE;
-            font-size: 12px;
-            outline: none;
-          }
-
-          label {
-            position: absolute;
-            left: 0;
-            padding-top: 0.5em;
+            font-size: 16px;
+            border: none;
+            background: #3524EE;
             transition: .5s;
-            /*pointer-events: none; */
-            color: #3524EE;
             cursor: pointer;
-            font-size: 20px;
+
+            &:hover {
+              background: #3524EE;
+              color: #fff;
+              border-radius: 5px;
+              box-shadow: 0 0 5px #3524EE,
+                0 0 25px #3524EE,
+                0 0 50px #3524EE,
+                0 0 100px #3524EE, ;
+            }
           }
         }
 
-        button {
-          padding: 0.5em 1.5em;
-          align-self: flex-start;
-          color: #3524EE;
-          font-size: 16px;
-          border: none;
-          background: #3524EE;
-          transition: .5s;
-          cursor: pointer;
+        @include media {
+          span {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50% 50%;
+          }
 
-          &:hover {
-            background: #3524EE;
-            color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 5px #3524EE,
-              0 0 25px #3524EE,
-              0 0 50px #3524EE,
-              0 0 100px #3524EE, ;
+          .emailField {
+            grid-row: 1 / 1;
+            grid-column: 2;
           }
         }
       }
-
     }
 
     @include media {
